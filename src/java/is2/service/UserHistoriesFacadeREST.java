@@ -6,10 +6,14 @@
 package is2.service;
 
 import is2.UserHistories;
+import is2.Usuario;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -25,7 +29,7 @@ import javax.ws.rs.core.MediaType;
  * @author Micaela
  */
 @Stateless
-@Path("is2.userhistories")
+@Path("/userhistories")
 public class UserHistoriesFacadeREST extends AbstractFacade<UserHistories> {
 
     @PersistenceContext(unitName = "MyGestorAppPU")
@@ -37,9 +41,18 @@ public class UserHistoriesFacadeREST extends AbstractFacade<UserHistories> {
 
     @POST
     @Override
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes(MediaType.APPLICATION_JSON)
     public void create(UserHistories entity) {
         super.create(entity);
+    }
+    
+    @POST
+    @Path("/crearUh")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public UserHistories crearUh(UserHistories entity) {
+        super.create(entity);
+        return entity;
     }
 
     @PUT
@@ -55,9 +68,24 @@ public class UserHistoriesFacadeREST extends AbstractFacade<UserHistories> {
         super.remove(super.find(id));
     }
 
+    @POST
+    @Path("/findByUsuario")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<UserHistories> findByUser(Usuario user) {
+        TypedQuery<UserHistories> query =getEntityManager().createNamedQuery("UserHistories.findByIdUsuario", UserHistories.class);
+        query.setParameter("idUsuario", user);
+      
+        try {
+            return query.getResultList();
+        } catch (NoResultException e) {
+            return null;
+        }
+    }
+    
     @GET
     @Path("{id}")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces(MediaType.APPLICATION_JSON)
     public UserHistories find(@PathParam("id") Integer id) {
         return super.find(id);
     }
