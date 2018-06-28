@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:id="@+id/item_navigation_drawer_uh"
+            android:icon="@drawable/baseline_assignment_black_24dp"
+            android:title="Mis tareas" />
+        <item
+            android:id="@+id/item_navigation_drawer_usuarios"
+            android:icon="@drawable/baseline_group_black_24"
+            android:title="Administrar usuarios" />
+        <item
+            android:id="@+id/item_navigation_drawer_perfil"
+            android:icon="@drawable/baseline_account_circle_black_24dp"
+            android:title="Mi Perfil" />
+        <item
+            android:id="@+id/item_navigation_drawer_cerrar_sesion"
+            android:icon="@drawable/baseline_exit_to_app_black_24dp"
+            android:title="Cerrar Sesión" />
+    </group>
+</menu>

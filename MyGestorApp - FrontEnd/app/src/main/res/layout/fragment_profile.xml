@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/nombre"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
+            android:textColor="@color/md_indigo_500" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Prueba"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="15dp"
+            android:text="@string/usuario"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
+            android:textColor="@color/md_indigo_500" />
+
+        <TextView
+            android:id="@+id/profile_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="prueba123"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="15dp"
+            android:text="@string/correo_electronico"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
+            android:textColor="@color/md_indigo_500" />
+
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="prueba@gmail.com"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/telefono"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
+            android:textColor="@color/md_indigo_500" />
+
+        <TextView
+            android:id="@+id/profile_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="123456"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="15dp"
+            android:text="@string/contrasenha"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
+            android:textColor="@color/md_indigo_500" />
+
+        <TextView
+            android:id="@+id/profile_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="******"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:tint="@android:color/white"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/baseline_create_black_24dp" />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
