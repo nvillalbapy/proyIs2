@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  * @author Micaela
  */
 @Stateless
-@Path("is2.rol")
+@Path("rol")
 public class RolFacadeREST extends AbstractFacade<Rol> {
 
     @PersistenceContext(unitName = "MyGestorAppPU")
@@ -57,7 +57,7 @@ public class RolFacadeREST extends AbstractFacade<Rol> {
 
     @GET
     @Path("{id}")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces(MediaType.APPLICATION_JSON)
     public Rol find(@PathParam("id") Integer id) {
         return super.find(id);
     }

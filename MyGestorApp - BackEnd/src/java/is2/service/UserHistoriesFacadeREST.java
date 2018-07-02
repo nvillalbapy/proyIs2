@@ -7,7 +7,6 @@ package is2.service;
 
 import is2.UserHistories;
 import is2.Usuario;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -57,7 +56,7 @@ public class UserHistoriesFacadeREST extends AbstractFacade<UserHistories> {
 
     @PUT
     @Path("{id}")
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes(MediaType.APPLICATION_JSON)
     public void edit(@PathParam("id") Integer id, UserHistories entity) {
         super.edit(entity);
     }
@@ -75,7 +74,6 @@ public class UserHistoriesFacadeREST extends AbstractFacade<UserHistories> {
     public List<UserHistories> findByUser(Usuario user) {
         TypedQuery<UserHistories> query =getEntityManager().createNamedQuery("UserHistories.findByIdUsuario", UserHistories.class);
         query.setParameter("idUsuario", user);
-      
         try {
             return query.getResultList();
         } catch (NoResultException e) {
@@ -92,7 +90,7 @@ public class UserHistoriesFacadeREST extends AbstractFacade<UserHistories> {
 
     @GET
     @Override
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces(MediaType.APPLICATION_JSON)
     public List<UserHistories> findAll() {
         return super.findAll();
     }

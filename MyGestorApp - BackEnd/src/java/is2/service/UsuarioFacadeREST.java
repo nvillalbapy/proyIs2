@@ -82,7 +82,7 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
 
     @PUT
     @Path("/edit/{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Usuario editar(@PathParam("id") Integer id, Usuario user) {
         Boolean disponible = usuarioDisponible(user);
         if (disponible) {
@@ -94,6 +94,20 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
         }
     }
     
+    @POST
+    @Path("/findByUsuario")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Usuario findUser(Usuario user) {
+        TypedQuery<Usuario> query =getEntityManager().createNamedQuery("Usuario.findByUsuario", Usuario.class);
+        query.setParameter("usuario", user.getUsuario());
+        try {
+            Usuario usuario = query.getSingleResult();
+            return usuario;
+        } catch (NoResultException e) {
+            return null;
+        }
+    }
     
     @PUT
     @Path("{id}")
