@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,120 +11,126 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/person2"
+            android:src="@drawable/person"
+            />
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:text="@string/nombre"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/edit_name"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:inputType="textPersonName"
+            android:layout_marginLeft="15dp"
+            android:text="Prueba"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:text="@string/nombre" />
+            android:textColor="@color/md_text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="15dp"
             android:text="@string/usuario"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/edit_user"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/profile_user"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:inputType="textPersonName"
+            android:layout_marginLeft="15dp"
+            android:text="prueba123"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:text="@string/usuario" />
+            android:textColor="@color/md_text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="15dp"
             android:text="@string/correo_electronico"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/edit_email"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:inputType="textPersonName"
+            android:layout_marginLeft="15dp"
+            android:text="prueba@gmail.com"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:text="@string/correo_electronico" />
+            android:textColor="@color/md_text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/telefono"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/edit_phone"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/profile_phone"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:inputType="textPersonName"
+            android:layout_marginLeft="15dp"
+            android:text="123456"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:text="@string/telefono" />
+            android:textColor="@color/md_text" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="15dp"
             android:text="@string/contrasenha"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/edit_password"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/profile_password"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:inputType="textPersonName"
+            android:layout_marginLeft="15dp"
+            android:text="******"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:text="@string/contrasenha_oculta" />
+            android:textColor="@color/md_text" />
 
         <TextView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Tipo de usuario"
+            android:layout_marginLeft="15dp"
+            android:text="Tipo de Usuario"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500" />
 
-        <Spinner
-            android:id="@+id/edit_type_user"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/profile_tipo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:entries="@array/entries_type_user"
-            tools:listitem="@android:layout/simple_list_item_1" />
+            android:layout_marginLeft="15dp"
+            android:text="Usuario"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,6 +140,16 @@
         android:orientation="horizontal">
 
         <android.support.design.widget.FloatingActionButton
+            android:id="@+id/borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:tint="@android:color/white"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,7 +157,7 @@
             android:layout_margin="@dimen/fab_margin"
             android:tint="@android:color/white"
             app:fabSize="normal"
-            app:srcCompat="@drawable/ic_check" />
+            app:srcCompat="@drawable/baseline_create_black_24dp" />
 
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

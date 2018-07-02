@@ -28,7 +28,7 @@ import com.is2.mygestorapp.Registration;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class EditUserFragment extends Fragment {
+public class EditMyProfileFragment extends Fragment {
 
     private FloatingActionButton acceptButton;
     private TextInputEditText profileName;
@@ -38,15 +38,14 @@ public class EditUserFragment extends Fragment {
     private TextInputEditText profilePassword;
     private Integer idUsuario;
     private String nombre, usuario, correo, telefono, contrasenha;
-    private Spinner rol;
-    private int idRol;
+    private Integer idRol;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view = inflater.inflate(R.layout.fragment_edit_user, container, false);
+        final View view = inflater.inflate(R.layout.fragment_edit_my_profile, container, false);
 
-        ((Homepage) getActivity()).getSupportActionBar().setTitle("Editar usuario");
+        ((Homepage) getActivity()).getSupportActionBar().setTitle("Editar mi perfil");
 
         //Extrae los campos pasados como argumentos
         idUsuario = getArguments().getInt(Homepage.ID_KEY);
@@ -55,6 +54,7 @@ public class EditUserFragment extends Fragment {
         correo =  getArguments().getString(Homepage.CORREO_KEY);
         telefono =  getArguments().getString(Homepage.TELEFONO_KEY);
         contrasenha = getArguments().getString(Homepage.CONTRASENHA_KEY);
+        idRol = getArguments().getInt(Homepage.ID_ROL_KEY);
 
         // Presenta los campos extraidos
         profileName = (TextInputEditText) view.findViewById(R.id.edit_name);
@@ -64,21 +64,6 @@ public class EditUserFragment extends Fragment {
         profilePassword = (TextInputEditText) view.findViewById(R.id.edit_password);
 
         view.findViewById(R.id.edit_name).requestFocus();
-
-        rol = (Spinner) view.findViewById(R.id.edit_type_user);
-
-        rol.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                idRol = i + 1;
-                //(Integer) adapterView.getItemAtPosition(i);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
         profileName.setText(nombre);
         profileUser.setText(usuario);

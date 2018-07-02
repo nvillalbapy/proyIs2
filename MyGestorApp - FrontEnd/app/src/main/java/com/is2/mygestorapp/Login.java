@@ -47,7 +47,6 @@ public class Login extends AppCompatActivity {
     /*Metodo que sera llamado cuando el usuario haga click en el boton login*/
     private void validarLogin(){
         Intent intent = new Intent(this, Homepage.class);
-        finish();
 
         Connection connection = new Connection();
         JSONObject loginParams = new JSONObject();
@@ -78,7 +77,7 @@ public class Login extends AppCompatActivity {
 
         try {
             loginParams.put("password", contrasenha);
-            loginParams.put("usuario", usuario);
+            loginParams.put("usuario", usuario.toLowerCase());
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -99,6 +98,7 @@ public class Login extends AppCompatActivity {
 
             intent.putExtra(EXTRA_MESSAGE, editTextUser.getText().toString());
             startActivity(intent);
+            finish();
         }
         catch(NullPointerException e){
             Toast.makeText(this,"Conexión con el servidor fallida.", 5).show();

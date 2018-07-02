@@ -39,6 +39,7 @@ public class Registration extends AppCompatActivity {
         Connection connection = new Connection();
         JSONObject registrationParams = new JSONObject();
         JSONObject json;
+        JSONObject idRol;
         User user;
         String message;
 
@@ -106,10 +107,12 @@ public class Registration extends AppCompatActivity {
         }
 
         try {
+            idRol = new JSONObject("{\"idRol\":2,\"nombreRol\":\"Usuario\"}");
             registrationParams.put("nombre", nombreUsuario);
-            registrationParams.put("usuario", usuario);
+            registrationParams.put("usuario", usuario.toLowerCase());
             registrationParams.put("password", contrasenha);
             registrationParams.put("mail", correoElectronico);
+            registrationParams.put("idRol", idRol);
             registrationParams.put("telefono", telefono);
         } catch (JSONException e) {
             e.printStackTrace();

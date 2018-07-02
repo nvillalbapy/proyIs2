@@ -5,19 +5,39 @@
         <item
             android:checked="true"
             android:id="@+id/item_navigation_drawer_uh"
-            android:icon="@drawable/baseline_assignment_black_24dp"
+            android:icon="@drawable/baseline_assignment_turned_in_black_24dp"
             android:title="Mis tareas" />
+
+        <!-- Sección de Administrador -->
         <item
-            android:id="@+id/item_navigation_drawer_usuarios"
-            android:icon="@drawable/baseline_group_black_24"
-            android:title="Administrar usuarios" />
+            android:id="@+id/admin_section"
+            android:title="@string/admin_item">
+            <menu>
+                <item
+                    android:id="@+id/item_navigation_drawer_tareas"
+                    android:icon="@drawable/baseline_assignment_black_24dp"
+                    android:title="Administrar tareas" />
+                <item
+                    android:id="@+id/item_navigation_drawer_usuarios"
+                    android:icon="@drawable/baseline_group_black_24"
+                    android:title="Administrar usuarios" />
+            </menu>
+        </item>
+
+        <!-- Sección de configuración -->
         <item
-            android:id="@+id/item_navigation_drawer_perfil"
-            android:icon="@drawable/baseline_account_circle_black_24dp"
-            android:title="Mi Perfil" />
-        <item
-            android:id="@+id/item_navigation_drawer_cerrar_sesion"
-            android:icon="@drawable/baseline_exit_to_app_black_24dp"
-            android:title="Cerrar Sesión" />
+            android:id="@+id/config_section"
+            android:title="@string/config_item">
+            <menu>
+                <item
+                    android:id="@+id/item_navigation_drawer_perfil"
+                    android:icon="@drawable/baseline_account_circle_black_24dp"
+                    android:title="Mi Perfil" />
+                <item
+                    android:id="@+id/item_navigation_drawer_cerrar_sesion"
+                    android:icon="@drawable/baseline_exit_to_app_black_24dp"
+                    android:title="Cerrar Sesión" />
+            </menu>
+        </item>
     </group>
 </menu>

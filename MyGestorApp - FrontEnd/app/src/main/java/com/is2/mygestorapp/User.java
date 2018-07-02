@@ -14,6 +14,7 @@ public class User {
     private String password;
     private String mail;
     private String telefono;
+    private Rol idRol;
 
     public static JSONObject Usuario;
 
@@ -24,6 +25,7 @@ public class User {
         this.password = user.getString("password");
         this.mail = user.getString("mail");
         this.telefono = user.getString("telefono");
+        this.idRol = new Rol(user.getJSONObject("idRol"));
     }
 
     public int getIdUsuario() {
@@ -48,5 +50,19 @@ public class User {
 
     public String getPhone() {
         return telefono;
+    }
+
+    public Rol getIdRol(){
+        return idRol;
+    }
+    public int getIdRol(String rol) {
+        switch (rol){
+            case "Administrador":
+                return 1;
+            case "Usuario":
+                return 2;
+            default:
+                return -1;
+        }
     }
 }

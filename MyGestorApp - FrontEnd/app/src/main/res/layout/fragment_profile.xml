@@ -11,6 +11,13 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/person2"
+            android:src="@drawable/person"
+            />
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -103,6 +110,25 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="******"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/md_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="15dp"
+            android:text="Tipo de Usuario"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
+            android:textColor="@color/md_indigo_500" />
+
+        <TextView
+            android:id="@+id/profile_tipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Usuario"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@color/md_text" />
     </LinearLayout>

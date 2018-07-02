@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/itemImage"
-        android:layout_width="100dp"
-        android:layout_height="75dp"/>
+        android:id="@+id/imgPersona"
+        android:layout_width="60dp"
+        android:layout_height="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/itemTitulo"
+            android:id="@+id/itemNombre"
             android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
             android:textColor="@color/md_indigo_500"
             android:layout_marginTop="8dp"/>
@@ -26,15 +26,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/itemEstado"
+            android:id="@+id/itemUsuario"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@color/md_text"/>
-
-        <TextView
-            android:id="@+id/itemVencimiento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="@color/md_text"
+            android:layout_marginBottom="8dp" />
     </LinearLayout>
 </LinearLayout>

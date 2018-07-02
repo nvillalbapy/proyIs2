@@ -107,25 +107,6 @@
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:text="@string/contrasenha_oculta" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Tipo de usuario"
-            android:textAppearance="@android:style/TextAppearance.StatusBar.Title"
-            android:textColor="@color/md_indigo_500" />
-
-        <Spinner
-            android:id="@+id/edit_type_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:entries="@array/entries_type_user"
-            tools:listitem="@android:layout/simple_list_item_1" />
     </LinearLayout>
 
     <LinearLayout
