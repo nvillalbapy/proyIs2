@@ -5,4 +5,3 @@ Integrantes:
 - Micaela Gisselle Paredes Villalba.
 - Jessica Paola Reyes Paez.
 - Analia Victoria Revolero Santacruz.
-- Nicolás Villalba.
